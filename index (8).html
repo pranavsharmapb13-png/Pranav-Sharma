@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="Pranav Sharma is a digital marketer blending performance data and creative strategy to build measurable growth.">
+  <title>Pranav Sharma — Digital Marketing & Growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#10110f',
+            panel: '#171916',
+            line: '#2c2f29',
+            muted: '#a1a59a',
+            paper: '#f2f0e9',
+            ember: '#ff7043',
+            gold: '#efbd65'
+          },
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            mono: ['DM Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: #10110f;
+      background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 54px 54px;
+      color: #f2f0e9;
+      font-family: 'Manrope', sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    ::selection { background: #ff7043; color: #10110f; }
+    .page-wrap { background: linear-gradient(180deg, rgba(16,17,15,.96), rgba(16,17,15,.985)); }
+    .eyebrow { font-family: 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .hero-title { max-width: 850px; font-size: clamp(3.2rem, 8vw, 7.35rem); line-height: .98; letter-spacing: -.075em; }
+    .outline-text { color: transparent; -webkit-text-stroke: 1px rgba(242,240,233,.72); }
+    .hero-visual { min-height: 420px; background-image: linear-gradient(180deg, rgba(11,12,10,.02) 18%, rgba(11,12,10,.83) 100%), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=85'); background-position: center; background-size: cover; }
+    .project-image { background-position: center; background-size: cover; transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+    .project-card:hover .project-image { transform: scale(1.035); }
+    .project-overlay { background: linear-gradient(180deg, rgba(10,11,10,.03) 8%, rgba(10,11,10,.82) 100%); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .menu-panel { display: none; }
+    .menu-panel.is-open { display: flex; }
+    .form-control { width: 100%; background: transparent; border: 0; border-bottom: 1px solid #41443d; border-radius: 0; color: #f2f0e9; outline: none; padding: 13px 0; transition: border-color .2s ease; }
+    .form-control:focus { border-color: #ff7043; }
+    .form-control::placeholder { color: #777b71; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <div class="page-wrap min-h-screen overflow-hidden">
+    <header class="relative z-20 border-b border-line/80">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12" aria-label="Main navigation">
+        <a href="#top" class="flex items-center gap-3" aria-label="Pranav Sharma, home">
+          <span class="grid h-10 w-10 place-items-center border border-ember/70 font-mono text-sm text-ember">PS</span>
+          <span class="leading-tight"><span class="block text-sm font-extrabold tracking-tight">PRANAV SHARMA</span><span class="eyebrow mt-1 block text-[9px] text-muted">Digital marketer</span></span>
+        </a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a class="text-xs text-muted transition hover:text-paper" href="#expertise">Expertise</a>
+          <a class="text-xs text-muted transition hover:text-paper" href="#work">Selected work</a>
+          <a class="text-xs text-muted transition hover:text-paper" href="#about">About</a>
+          <a class="group inline-flex items-center gap-3 border border-paper/30 px-4 py-3 text-xs transition hover:border-ember hover:text-ember" href="#contact">Let's talk <span aria-hidden="true" class="text-ember transition group-hover:translate-x-1">↗</span></a>
+        </div>
+        <button id="menu-toggle" class="grid h-11 w-11 place-items-center border border-line text-paper md:hidden" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="menu-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="menu-panel absolute left-0 right-0 top-full flex-col border-b border-line bg-ink px-5 py-4 md:hidden" aria-label="Mobile navigation">
+        <a class="py-3 text-sm text-muted" href="#expertise">Expertise</a>
+        <a class="py-3 text-sm text-muted" href="#work">Selected work</a>
+        <a class="py-3 text-sm text-muted" href="#about">About</a>
+        <a class="py-3 text-sm text-ember" href="#contact">Let's talk ↗</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="top" class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-[1.05fr_.95fr] lg:gap-8 lg:px-12 lg:pb-28 lg:pt-28">
+        <div class="relative z-10">
+          <p class="eyebrow mb-7 flex items-center gap-3 text-xs text-gold"><span class="h-px w-8 bg-ember"></span>Growth, built with intent</p>
+          <h1 class="hero-title font-extrabold">Data-driven marketing.<br><span class="outline-text">Creative</span> execution.</h1>
+          <p class="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">I turn brand visibility into measurable growth, bringing sharp analysis and thoughtful creative together at every stage of the customer journey.</p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#work" class="inline-flex min-h-14 items-center gap-4 bg-ember px-6 text-sm font-bold text-ink transition hover:bg-gold">Explore my work <span aria-hidden="true">↘</span></a>
+            <a href="#contact" class="inline-flex min-h-14 items-center gap-4 border border-paper/25 px-6 text-sm font-semibold transition hover:border-paper">Start a conversation <span aria-hidden="true" class="text-ember">↗</span></a>
+          </div>
+          <div class="mt-12 flex items-center gap-3 text-xs text-muted"><span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-ember opacity-40"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-ember"></span></span>Available for select projects</div>
+        </div>
+        <div class="relative lg:ml-4">
+          <div class="absolute -right-3 -top-3 z-10 hidden border border-ember/50 bg-ink px-4 py-3 sm:block"><span class="eyebrow block text-[9px] text-muted">Approach</span><span class="mt-1 block text-sm font-semibold">Insight → impact</span></div>
+          <div class="hero-visual relative flex items-end overflow-hidden border border-line p-6 sm:p-8">
+            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-ember"></span><span class="eyebrow text-[9px] text-paper/80">Growth snapshot / 2025</span></div>
+            <div class="relative grid w-full grid-cols-2 gap-3 sm:grid-cols-3">
+              <div class="border border-white/15 bg-ink/75 p-4 backdrop-blur-sm"><span class="eyebrow text-[9px] text-muted">ROAS lift</span><span class="mt-2 block text-2xl font-extrabold text-gold">3.4<span class="text-base">×</span></span></div>
+              <div class="border border-white/15 bg-ink/75 p-4 backdrop-blur-sm"><span class="eyebrow text-[9px] text-muted">CAC reduced</span><span class="mt-2 block text-2xl font-extrabold text-paper">28<span class="text-base">%</span></span></div>
+              <div class="col-span-2 border border-white/15 bg-ink/75 p-4 backdrop-blur-sm sm:col-span-1"><span class="eyebrow text-[9px] text-muted">North star</span><span class="mt-2 block text-sm font-bold">Sustainable growth</span></div>
+            </div>
+          </div>
+          <div class="mt-3 flex justify-between"><span class="eyebrow text-[9px] text-muted">Performance × perspective</span><span class="eyebrow text-[9px] text-muted">01 / 05</span></div>
+        </div>
+      </section>
+
+      <div class="border-y border-line bg-panel/75">
+        <div class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-line sm:grid-cols-4 sm:divide-y-0">
+          <div class="px-5 py-6 sm:px-8 lg:px-12"><span class="eyebrow text-[9px] text-muted">Mindset</span><p class="mt-2 text-sm font-semibold">Test, learn, grow</p></div>
+          <div class="px-5 py-6 sm:px-8 lg:px-12"><span class="eyebrow text-[9px] text-muted">Focus</span><p class="mt-2 text-sm font-semibold">Revenue, not vanity</p></div>
+          <div class="px-5 py-6 sm:px-8 lg:px-12"><span class="eyebrow text-[9px] text-muted">Method</span><p class="mt-2 text-sm font-semibold">Creative + analytics</p></div>
+          <div class="px-5 py-6 sm:px-8 lg:px-12"><span class="eyebrow text-[9px] text-muted">Partnership</span><p class="mt-2 text-sm font-semibold">Built around your goals</p></div>
+        </div>
+      </div>
+
+      <section id="expertise" class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+        <div class="reveal mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div><p class="eyebrow mb-4 text-xs text-ember">What I do</p><h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Expertise that compounds.</h2></div>
+          <p class="max-w-sm text-sm leading-6 text-muted">From first click to loyal customer, I connect the channels and decisions that move the whole business forward.</p>
+        </div>
+        <div class="grid gap-3 md:grid-cols-3">
+          <article class="reveal group border border-line bg-panel p-6 transition duration-300 hover:border-ember/60 sm:p-8">
+            <div class="flex items-start justify-between"><span class="eyebrow text-[10px] text-muted">01 / Acquisition</span><span class="grid h-10 w-10 place-items-center border border-line text-ember" aria-hidden="true">↗</span></div>
+            <h3 class="mt-12 max-w-xs text-2xl font-bold leading-tight">Paid media &amp;<br>performance</h3>
+            <p class="mt-4 text-sm leading-6 text-muted">Build efficient acquisition engines with clear attribution and a relentless focus on return.</p>
+            <div class="mt-7 flex flex-wrap gap-2"><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">Google Ads</span><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">Meta Ads</span><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">ROI tracking</span><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">SQL / Analytics</span></div>
+          </article>
+          <article class="reveal group border border-line bg-panel p-6 transition duration-300 hover:border-ember/60 sm:p-8">
+            <div class="flex items-start justify-between"><span class="eyebrow text-[10px] text-muted">02 / Positioning</span><span class="grid h-10 w-10 place-items-center border border-line text-ember" aria-hidden="true">✳</span></div>
+            <h3 class="mt-12 max-w-xs text-2xl font-bold leading-tight">Content &amp;<br>brand strategy</h3>
+            <p class="mt-4 text-sm leading-6 text-muted">Turn a clear point of view into useful content that earns attention and builds demand.</p>
+            <div class="mt-7 flex flex-wrap gap-2"><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">SEO</span><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">Copywriting</span><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">Funnel optimization</span></div>
+          </article>
+          <article class="reveal group border border-line bg-panel p-6 transition duration-300 hover:border-ember/60 sm:p-8">
+            <div class="flex items-start justify-between"><span class="eyebrow text-[10px] text-muted">03 / Retention</span><span class="grid h-10 w-10 place-items-center border border-line text-ember" aria-hidden="true">↻</span></div>
+            <h3 class="mt-12 max-w-xs text-2xl font-bold leading-tight">Email &amp; lifecycle<br>marketing</h3>
+            <p class="mt-4 text-sm leading-6 text-muted">Make every customer interaction more relevant with thoughtful lifecycle systems.</p>
+            <div class="mt-7 flex flex-wrap gap-2"><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">CRM automation</span><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">Retention</span><span class="eyebrow border border-line px-2.5 py-2 text-[9px] text-muted">Segmentation</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="border-y border-line bg-panel/45">
+        <div class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+          <div class="reveal mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div><p class="eyebrow mb-4 text-xs text-ember">Selected work</p><h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Outcomes over output.</h2></div>
+            <p class="max-w-sm text-sm leading-6 text-muted">A few examples of how a clear strategy and a well-run experiment can change the trajectory.</p>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-3">
+            <article class="project-card reveal group overflow-hidden border border-line bg-ink">
+              <div class="relative h-56 overflow-hidden"><div class="project-image absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80')"></div><div class="project-overlay absolute inset-0"></div><span class="eyebrow absolute left-5 top-5 border border-white/25 bg-ink/70 px-3 py-2 text-[9px]">E-commerce / Paid media</span><span class="absolute bottom-4 right-5 font-mono text-xs text-paper/80">CASE 001</span></div>
+              <div class="p-6"><div class="flex items-start justify-between gap-3"><h3 class="text-xl font-bold">E-Commerce Scale-Up</h3><span class="shrink-0 text-2xl font-extrabold text-gold">3.4×</span></div><p class="mt-3 text-sm leading-6 text-muted">Scaled return on ad spend through targeted, multichannel acquisition funnels.</p><div class="case-detail hidden border-t border-line pt-4" id="case-1-detail"><p class="text-xs leading-5 text-muted">Connected audience insights, creative testing, and channel-level ROI tracking to unlock more efficient spend at scale.</p></div><button class="case-toggle mt-5 inline-flex items-center gap-2 text-xs font-bold text-ember hover:text-gold" type="button" aria-expanded="false" aria-controls="case-1-detail">Read the approach <span aria-hidden="true">↗</span></button></div>
+            </article>
+            <article class="project-card reveal group overflow-hidden border border-line bg-ink">
+              <div class="relative h-56 overflow-hidden"><div class="project-image absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80')"></div><div class="project-overlay absolute inset-0"></div><span class="eyebrow absolute left-5 top-5 border border-white/25 bg-ink/70 px-3 py-2 text-[9px]">SaaS / Organic growth</span><span class="absolute bottom-4 right-5 font-mono text-xs text-paper/80">CASE 002</span></div>
+              <div class="p-6"><div class="flex items-start justify-between gap-3"><h3 class="text-xl font-bold">SaaS Growth Loop</h3><span class="shrink-0 text-2xl font-extrabold text-gold">−28%</span></div><p class="mt-3 text-sm leading-6 text-muted">Lowered acquisition cost with an organic SEO and LinkedIn inbound campaign.</p><div class="case-detail hidden border-t border-line pt-4" id="case-2-detail"><p class="text-xs leading-5 text-muted">Built a focused content engine around high-intent search and expert-led LinkedIn distribution, then refined conversion paths.</p></div><button class="case-toggle mt-5 inline-flex items-center gap-2 text-xs font-bold text-ember hover:text-gold" type="button" aria-expanded="false" aria-controls="case-2-detail">Read the approach <span aria-hidden="true">↗</span></button></div>
+            </article>
+            <article class="project-card reveal group overflow-hidden border border-line bg-ink">
+              <div class="relative h-56 overflow-hidden"><div class="project-image absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80')"></div><div class="project-overlay absolute inset-0"></div><span class="eyebrow absolute left-5 top-5 border border-white/25 bg-ink/70 px-3 py-2 text-[9px]">B2B / Retargeting</span><span class="absolute bottom-4 right-5 font-mono text-xs text-paper/80">CASE 003</span></div>
+              <div class="p-6"><div class="flex items-start justify-between gap-3"><h3 class="text-xl font-bold">Omnichannel Retargeting</h3><span class="shrink-0 text-2xl font-extrabold text-gold">42%</span></div><p class="mt-3 text-sm leading-6 text-muted">Qualified high-intent leads faster with a coordinated performance campaign.</p><div class="case-detail hidden border-t border-line pt-4" id="case-3-detail"><p class="text-xs leading-5 text-muted">Aligned audience signals and messaging across retargeting touchpoints, shortening the journey from first revisit to sales-ready.</p></div><button class="case-toggle mt-5 inline-flex items-center gap-2 text-xs font-bold text-ember hover:text-gold" type="button" aria-expanded="false" aria-controls="case-3-detail">Read the approach <span aria-hidden="true">↗</span></button></div>
+            </article>
+          </div>
+          <p class="mt-5 text-[10px] leading-5 text-muted/75">Project outcomes shown are representative examples; campaign scope and results vary by business.</p>
+        </div>
+      </section>
+
+      <section id="process" class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+        <div class="reveal mb-12"><p class="eyebrow mb-4 text-xs text-ember">The working rhythm</p><h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl">A clear path to better.</h2></div>
+        <div class="grid border-l border-line sm:grid-cols-2 lg:grid-cols-4 lg:border-l-0">
+          <article class="reveal relative border-b border-line py-7 pl-6 sm:pr-6 lg:border-l lg:py-5"><span class="absolute -left-[5px] top-8 h-2 w-2 rounded-full bg-ember lg:top-6"></span><span class="eyebrow text-[10px] text-ember">01 / Discover</span><h3 class="mt-5 text-lg font-bold">Discovery &amp; audit</h3><p class="mt-3 text-sm leading-6 text-muted">Understand the business, audience, and current growth constraints.</p></article>
+          <article class="reveal relative border-b border-line py-7 pl-6 sm:pr-6 lg:border-l lg:py-5"><span class="absolute -left-[5px] top-8 h-2 w-2 rounded-full bg-ember lg:top-6"></span><span class="eyebrow text-[10px] text-ember">02 / Design</span><h3 class="mt-5 text-lg font-bold">Strategy &amp; setup</h3><p class="mt-3 text-sm leading-6 text-muted">Set the measurement plan, channel mix, and creative direction.</p></article>
+          <article class="reveal relative border-b border-line py-7 pl-6 sm:pr-6 lg:border-l lg:py-5"><span class="absolute -left-[5px] top-8 h-2 w-2 rounded-full bg-ember lg:top-6"></span><span class="eyebrow text-[10px] text-ember">03 / Launch</span><h3 class="mt-5 text-lg font-bold">Campaign launch</h3><p class="mt-3 text-sm leading-6 text-muted">Go live with a focused first test and dependable tracking in place.</p></article>
+          <article class="reveal relative py-7 pl-6 sm:pr-6 lg:border-l lg:py-5"><span class="absolute -left-[5px] top-8 h-2 w-2 rounded-full bg-ember lg:top-6"></span><span class="eyebrow text-[10px] text-ember">04 / Improve</span><h3 class="mt-5 text-lg font-bold">Scale &amp; optimize</h3><p class="mt-3 text-sm leading-6 text-muted">Use real performance signals to improve, scale, and repeat.</p></article>
+        </div>
+      </section>
+
+      <section id="about" class="border-y border-line bg-panel/55">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:px-12 lg:py-32">
+          <div class="reveal relative border border-line p-7 sm:p-10"><span class="eyebrow text-[10px] text-muted">A little about me</span><p class="mt-9 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">Curious by nature.<br><span class="text-ember">Commercial by design.</span></p><div class="mt-10 flex items-center gap-4"><span class="grid h-12 w-12 place-items-center border border-ember/50 font-mono text-sm text-ember">PS</span><span><span class="block text-sm font-bold">Pranav Sharma</span><span class="eyebrow mt-1 block text-[9px] text-muted">Digital marketer &amp; growth partner</span></span></div></div>
+          <div class="reveal"><p class="eyebrow mb-5 text-xs text-ember">Strategy meets execution</p><h2 class="max-w-2xl text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">I bring analytical rigor and creative thinking to the same table.</h2><p class="mt-6 max-w-2xl text-sm leading-7 text-muted sm:text-base">Good marketing is more than a dashboard or a clever campaign. It takes a clear understanding of people, a sharp point of view, and the discipline to learn from every result. I help teams connect those pieces and turn insight into momentum that lasts.</p><p class="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">My work lives at the intersection of performance, content, and customer experience, with a practical bias toward the outcomes that matter to your business.</p><a href="#contact" class="mt-8 inline-flex items-center gap-3 border-b border-ember pb-2 text-sm font-bold transition hover:text-ember">Let's build something useful <span aria-hidden="true" class="text-ember">↗</span></a></div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto grid max-w-7xl gap-14 px-5 py-24 sm:px-8 lg:grid-cols-[.85fr_1.15fr] lg:px-12 lg:py-32">
+        <div class="reveal"><p class="eyebrow mb-5 text-xs text-ember">Have a good challenge?</p><h2 class="max-w-xl text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl">Let's make<br>growth <span class="text-ember">happen.</span></h2><p class="mt-6 max-w-md text-sm leading-7 text-muted">Tell me what you're working toward. I’ll get back to you with a few thoughtful next steps.</p><div class="mt-10"><span class="eyebrow text-[9px] text-muted">Elsewhere</span><div class="mt-4 flex flex-wrap gap-5 text-sm"><a class="text-paper transition hover:text-ember" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="text-paper transition hover:text-ember" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><a class="text-paper transition hover:text-ember" href="mailto:hello@yourdomain.com">Email ↗</a></div></div></div>
+        <form id="contact-form" class="reveal border border-line bg-panel p-6 sm:p-9" novalidate>
+          <div class="grid gap-7 sm:grid-cols-2"><label class="block"><span class="eyebrow text-[9px] text-muted">Your name</span><input class="form-control text-sm" type="text" name="name" placeholder="Jane Smith" autocomplete="name" required></label><label class="block"><span class="eyebrow text-[9px] text-muted">Email address</span><input class="form-control text-sm" type="email" name="email" placeholder="jane@company.com" autocomplete="email" required></label></div>
+          <label class="mt-8 block"><span class="eyebrow text-[9px] text-muted">What are you looking to grow?</span><textarea class="form-control min-h-28 resize-y text-sm" name="message" placeholder="A little about the opportunity..." required></textarea></label>
+          <div class="mt-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center"><button class="inline-flex min-h-12 items-center gap-4 bg-ember px-5 text-sm font-bold text-ink transition hover:bg-gold" type="submit">Send an inquiry <span aria-hidden="true">↗</span></button><p id="form-status" class="text-xs leading-5 text-muted" role="status" aria-live="polite">This form opens your email app to send your message.</p></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="border-t border-line">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12"><a href="#top" class="font-bold text-paper">PRANAV SHARMA <span class="font-normal text-muted">/ Growth partner</span></a><span>© <span id="year"></span> Pranav Sharma. Made with intention.</span><a href="#top" class="transition hover:text-ember">Back to top ↑</a></div>
+    </footer>
+  </div>
+  <script>
+    const menuToggle = document.querySelector('#menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const menuIcon = document.querySelector('#menu-icon');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+      mobileMenu.classList.toggle('is-open', !isOpen);
+      menuIcon.innerHTML = isOpen
+        ? '<path d="M4 7h16M4 12h16M4 17h16"/>'
+        : '<path d="m6 6 12 12M18 6 6 18"/>';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation');
+        mobileMenu.classList.remove('is-open');
+        menuIcon.innerHTML = '<path d="M4 7h16M4 12h16M4 17h16"/>';
+      });
+    });
+
+    document.querySelectorAll('.case-toggle').forEach((button) => {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const detail = document.getElementById(button.getAttribute('aria-controls'));
+        button.setAttribute('aria-expanded', String(!isExpanded));
+        detail.classList.toggle('hidden', isExpanded);
+        button.innerHTML = isExpanded
+          ? 'Read the approach <span aria-hidden="true">↗</span>'
+          : 'Close details <span aria-hidden="true">−</span>';
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+    document.querySelector('#year').textContent = new Date().getFullYear();
+
+    document.querySelector('#contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const status = document.querySelector('#form-status');
+      if (!form.reportValidity()) return;
+
+      const formData = new FormData(form);
+      const subject = encodeURIComponent(`Portfolio inquiry from ${formData.get('name')}`);
+      const body = encodeURIComponent(`${formData.get('message')}\n\nFrom: ${formData.get('name')} (${formData.get('email')})`);
+      status.textContent = 'Opening your email app...';
+      window.location.href = `mailto:hello@yourdomain.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
